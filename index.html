@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palmpay Balance Adder</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f9f9f9;
+		}
+		
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.image-container {
+			text-align: center;
+			margin-top: 20px;
+		}
+		
+		.account-container {
+			margin-top: 20px;
+		}
+		
+		.account-label {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		
+		.account-input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		.next-button {
+			background-color: #333;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.next-button:hover {
+			background-color: #444;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>Palmpay Balance Adder</h2>
+		</div>
+		<div class="image-container">
+			<img src="logo.png" alt="Palmpay Logo" width="100px">
+		</div>
+		<div class="account-container">
+			<label class="account-label" for="account">Enter Account Number:</label>
+			<input class="account-input" type="number" id="account" name="account">
+			<button class="next-button" onclick="checkAccountNumber()">Next</button>
+		</div>
+	</div>
+	
+	<script>
+		function checkAccountNumber() {
+			var accountNumber = document.getElementById("account").value;
+			if (accountNumber.length !== 10) {
+				alert("Please enter a 10-digit account number");
+			} else {
+				window.location.href = "add-balance.html";
+			}
+		}
+	
+		function nextPage() {
+			window.location.href = "add-balance.html";
+		}
+	</script>
+</body>
+</html>
